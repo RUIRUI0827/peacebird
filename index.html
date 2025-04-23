@@ -18,7 +18,8 @@
     const cozeWebSDK = new CozeWebSDK.WebChatClient({
   config: {
       // 智能体 ID
-    botId: '7493786998319120399',
+    botId: '7496427659749310499',
+    isIframe: false,
   },
   auth:  {
       //鉴权方式，默认type 为unauth，表示不鉴权；建议设置为 token，表示通过PAT或OAuth鉴权
@@ -31,7 +32,11 @@
       chatBot: {
         title: "智能客服",
         uploadable: true
-      }}
+      },
+      footer: {
+        isShow:false
+      }
+  }
 });
 </script>
 </body>
