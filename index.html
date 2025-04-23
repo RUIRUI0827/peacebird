@@ -19,7 +19,7 @@
   config: {
       // 智能体 ID
     botId: '7496427659749310499',
-    isIframe: true,
+    isIframe: false,
   },
   auth:  {
       //鉴权方式，默认type 为unauth，表示不鉴权；建议设置为 token，表示通过PAT或OAuth鉴权
@@ -29,6 +29,9 @@
     //访问密钥过期时，使用的新密钥，可以按需设置。
     onRefreshToken: () => 'pat_WWwl2avrcSN7JV13QCS3wZGKQDbvtXh9hW54Cdhl6QhSmYULLArxzmsV1T2vkazP',
   },ui:{
+      base:{
+        layout:'mobile',
+      },
       chatBot: {
         title: "智能客服",
         uploadable: true
