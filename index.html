@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+        /* 自定义悬浮入口的位置 */
+        #position_demo {
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello World</h1>
+<div id="position_demo"></div>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/cn/index.js"></script>
+    <script>
+    const cozeWebSDK = new CozeWebSDK.WebChatClient({
+  config: {
+      // 智能体 ID
+    botId: '7493786998319120399',
+  },
+  auth:  {
+      //鉴权方式，默认type 为unauth，表示不鉴权；建议设置为 token，表示通过PAT或OAuth鉴权
+    type: 'token',    
+     //type 为 token 时，需要设置PAT或OAuth访问密钥
+    token: 'pat_WWwl2avrcSN7JV13QCS3wZGKQDbvtXh9hW54Cdhl6QhSmYULLArxzmsV1T2vkazP',
+    //访问密钥过期时，使用的新密钥，可以按需设置。
+    onRefreshToken: () => 'pat_WWwl2avrcSN7JV13QCS3wZGKQDbvtXh9hW54Cdhl6QhSmYULLArxzmsV1T2vkazP',
+  },ui:{
+      chatBot: {
+        title: "智能客服",
+        uploadable: true
+      }}
+});
+</script>
+</body>
+</html>
